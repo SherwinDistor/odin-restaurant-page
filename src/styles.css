@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    background-color: maroon;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+nav > button {
+    font-size: 1rem;
+    border: none;
+    background-color: maroon;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+#content > * {
+    width: 700px;
+    margin: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+h1 {
+    text-align: center;
+}
