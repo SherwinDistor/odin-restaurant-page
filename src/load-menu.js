@@ -13,34 +13,66 @@ const loadMenu = () => {
     appetizers.textContent = 'APPETIZERS';
     menuDiv.appendChild(appetizers);
 
-    // Create menu items div
-    const menuItemsDiv = document.createElement('div');
-    menuItemsDiv.id = 'menu-items';
-    menuDiv.appendChild(menuItemsDiv);
+    // Create menu items div for apps
+    const menuItemsAppsDiv = document.createElement('div');
+    menuItemsAppsDiv.id = 'menu-items-apps';
+    menuDiv.appendChild(menuItemsAppsDiv);
 
     // Use the createMenuItems function by passing in the name, description, imageURL and price
-    menuItemsDiv.appendChild(createMenuItems(
-            'Spinach Artichoke Dip',
-            'Fresh Spinach, Roasted Garlic, Red Pepper Flakes, Smoked Gouda, Parmesan & Mozzarella. Served with Imported Crackers & Focaccia Bread.',
+    menuItemsAppsDiv.appendChild(createMenuItems(
+            'Chardonay Mussels',
+            'Mussels, Garlic, Fresh Herbs, Chardonnay Wine, Diced Tomatoes, Grilled Focaccia Bread.',
             'https://www.minervas.net/images/jqg_1674769188.jpg',
-            13
-        )
-    );
+            19
+    ));
 
-    menuItemsDiv.appendChild(createMenuItems(
-        'South Dakota Beef Chislic',
-        'Fried Premium Steak Tips, Garlic, Fresh Herbs, Bold BBQ Sauce.',
-        'https://www.minervas.net/images/jqg_1674769069.jpg',
-        18
-    )
-);
+    menuItemsAppsDiv.appendChild(createMenuItems(
+            'South Dakota Beef Chislic',
+            'Fried Premium Steak Tips, Garlic, Fresh Herbs, Bold BBQ Sauce.',
+            'https://www.minervas.net/images/jqg_1674769069.jpg',
+            18   
+    ));
 
     // Create h2 with entrees
     const entrees = document.createElement('h2');
     entrees.textContent = 'ENTREES';
     menuDiv.appendChild(entrees);
 
+    // Create menu items div for entrees
+    const menuItemsEntreesDiv = document.createElement('div');
+    menuItemsEntreesDiv.id = 'menu-items-entrees';
+    menuDiv.appendChild(menuItemsEntreesDiv);
+
+    // Create entree menu items
+    menuItemsEntreesDiv.appendChild(createMenuItems(
+        'Jumbo Prawns',
+        'Fresh Herbs, Garlic, Red Pepper Flakes, Butter, White Wine, Linguine. Topped with Charbroiled Jumbo Prawns.',
+        'https://www.minervas.net/images/jqg_1674769114.jpg',
+        38
+    ));
     
+    menuItemsEntreesDiv.appendChild(createMenuItems(
+        'Cajun Chicken Linguine',
+        'Cajun Spiced Chicken Breast, Carrots, Broccoli, Bell Peppers, Mushrooms, Almonds, Butter, Cream, White Wine.',
+        'https://www.minervas.net/images/jqg_1674769093.jpg',
+        22
+    ));
+
+    menuItemsEntreesDiv.appendChild(createMenuItems(
+        'Ribeye',
+        '12oz. With Mashed Potatoes, Sauteed Sweet Onions. Topped with Fresh Herbs, Butter & Garlic.',
+        'https://www.minervas.net/images/jqg_1674257206.jpg',
+        46
+    ));
+
+    menuItemsEntreesDiv.appendChild(createMenuItems(
+        'Canadian Walleye',
+        'Lightly Breaded, Dill Hollandaise Sauce, Toasted Almonds, White Cheddar Mashed.',
+        'https://www.minervas.net/images/jqg_1674769136.jpg',
+        28
+    ));
+    
+
     // Get main and append menu
     const mainDiv = document.getElementById('main');
     mainDiv.appendChild(menuDiv);
@@ -65,9 +97,6 @@ const createMenuItems = (name, description, imageURL, price) => {
     menuItemImage.src = imageURL;
     menuItemImage.alt = `Image of ${name}`;
     menuItemImage.id = 'menu-image';
-
-    // const menuItemImageDescriptionDiv = document.createElement('div');
-    // menuItemImageDescriptionDiv.id = 'menu-image-description';
 
     const menuItemPrice = document.createElement('h4');
     menuItemPrice.textContent = `$${price}.00`;

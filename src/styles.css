@@ -44,17 +44,15 @@ h1, h2, h3, h4 {
     margin: 10px;
 }
 
-#menu-items {
+#menu-items-apps, #menu-items-entrees {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 350px;
     gap: 20px;
 }
 
 #menu-item {
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 #menu-header {
@@ -66,7 +64,5 @@ h1, h2, h3, h4 {
 #menu-image {
     width: 100%;
     height: auto;
-    position: absolute;
-    bottom: 0;
 }
 
