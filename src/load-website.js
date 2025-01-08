@@ -1,4 +1,5 @@
 import { loadHome } from "./load-home";
+import { loadMenu } from "./load-menu";
 
 const createMain = () => {
     // Create main div
@@ -13,7 +14,8 @@ const initializeWebsite = () => {
 
     contentDiv.appendChild(createMain());
 
-    loadHome();
+    // loadHome();
+    loadMenu();
 }
 
 export { initializeWebsite };
