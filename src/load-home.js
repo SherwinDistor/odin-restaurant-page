@@ -1,16 +1,7 @@
 const loadHome = () => {
-    // Get div#content
-    const contentDiv = document.getElementById('content');
-
-    // Create main div
-    const mainDiv = document.createElement('div');
-    mainDiv.id = 'main';
-    contentDiv.appendChild(mainDiv);
-
     // Create div#home
     const homeDiv = document.createElement('div');
     homeDiv.id = 'home';
-    mainDiv.appendChild(homeDiv);
 
     // Create h1 element with restaurant name
     const restaurantName = document.createElement('h1');
@@ -49,6 +40,10 @@ const loadHome = () => {
     // Append the div with all the paragraphs to the content div
     homeDiv.appendChild(restaurantParagraphDiv);
 
+    // Get main and append home
+    const mainDiv = document.getElementById('main');
+    mainDiv.appendChild(homeDiv);
 }
+ 
 
 export { loadHome };
