@@ -13,14 +13,27 @@ const loadMenu = () => {
     appetizers.textContent = 'APPETIZERS';
     menuDiv.appendChild(appetizers);
 
+    // Create menu items div
+    const menuItemsDiv = document.createElement('div');
+    menuItemsDiv.id = 'menu-items';
+    menuDiv.appendChild(menuItemsDiv);
+
     // Use the createMenuItems function by passing in the name, description, imageURL and price
-    menuDiv.appendChild(createMenuItems(
+    menuItemsDiv.appendChild(createMenuItems(
             'Spinach Artichoke Dip',
             'Fresh Spinach, Roasted Garlic, Red Pepper Flakes, Smoked Gouda, Parmesan & Mozzarella. Served with Imported Crackers & Focaccia Bread.',
-            'https://photos.singleplatform.com/c_limit,w_1280,fl_progressive/81ea67af4343fc97501a2ac928f531b581b2068c.jpg',
+            'https://www.minervas.net/images/jqg_1674769188.jpg',
             13
         )
+    );
+
+    menuItemsDiv.appendChild(createMenuItems(
+        'South Dakota Beef Chislic',
+        'Fried Premium Steak Tips, Garlic, Fresh Herbs, Bold BBQ Sauce.',
+        'https://www.minervas.net/images/jqg_1674769069.jpg',
+        18
     )
+);
 
     // Create h2 with entrees
     const entrees = document.createElement('h2');
@@ -52,6 +65,9 @@ const createMenuItems = (name, description, imageURL, price) => {
     menuItemImage.src = imageURL;
     menuItemImage.alt = `Image of ${name}`;
     menuItemImage.id = 'menu-image';
+
+    // const menuItemImageDescriptionDiv = document.createElement('div');
+    // menuItemImageDescriptionDiv.id = 'menu-image-description';
 
     const menuItemPrice = document.createElement('h4');
     menuItemPrice.textContent = `$${price}.00`;
