@@ -1,4 +1,4 @@
-const loadContent = () => {
+const loadHome = () => {
     // Get div#content
     const contentDiv = document.getElementById('content');
 
@@ -38,4 +38,4 @@ const loadContent = () => {
 
 }
 
-export { loadContent };
+export { loadHome };

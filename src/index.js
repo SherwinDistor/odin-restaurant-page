@@ -1,6 +1,6 @@
 import './styles.css';
-import { loadContent } from './load-home';
+import { loadHome } from './load-home';
 
 console.log('hello world');
 
-loadContent();
+loadHome();
