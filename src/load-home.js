@@ -42,6 +42,7 @@ const loadHome = () => {
 
     // Get main and append home
     const mainDiv = document.getElementById('main');
+    mainDiv.textContent = '';
     mainDiv.appendChild(homeDiv);
 }
  

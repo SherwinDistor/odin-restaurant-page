@@ -75,6 +75,7 @@ const loadMenu = () => {
 
     // Get main and append menu
     const mainDiv = document.getElementById('main');
+    mainDiv.textContent = '';
     mainDiv.appendChild(menuDiv);
 }
 
